@@ -1,38 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("pxfuel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 50%;
+  margin-left: 25%;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1); /* Translucent glass morphism effect background */
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Glass morphism effect */
+  justify-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.custom-button {
+  background: rgba(255, 255, 255, 0.2); /* Translucent button color */
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial box shadow for neon effect */
+}
+
+.custom-button:hover {
+  background: #ac68ff; /* Pink neon light background */
+  animation: neon-light 1s ease infinite; /* Neon light animation */
+  box-shadow: 0 0 20px rgba(255, 107, 255, 0.7); /* Glow effect on hover */
+  color: white; /* Text color on hover */
+}
+
+@keyframes neon-light {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 107, 255, 0.7);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    box-shadow: 0 0 20px rgba(255, 107, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 107, 255, 0.7);
   }
 }
